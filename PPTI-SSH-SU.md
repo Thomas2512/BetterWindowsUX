@@ -44,11 +44,14 @@ n’oubliez pas de fermer jupyter si vous avez perdu votre conx et que vous n’
 En plus du /tmp, vous avez également un répertoire /tempory qui est semi-permanent (n’est pas nettoyé à chaque reboot, mais plus rarement) de plus de 300Go, dans lequel vous pouvez travailler quand vous avez besoin de place.
 
 #### Pour utiliser github :
-sur les machines à distance et pouvoir cloner un répo, il faut ajouter une clé ssh et ajouter  :  
-ssh.ufr-info-p6.jussieu.fr  dans le fichier de git config si je me souviens bien
+Sur les machines à distance et pour pouvoir cloner un répo, saisir dans le terminal:
+
+- `git config --global http.proxy http://proxy.ufr-info-p6.jussieu.fr:3128`
+- `git config --global https.proxy https://proxy.ufr-info-p6.jussieu.fr:3128`
 
 #### Pour installer des packages avec pip :  
 faire  à chaque fois pour ma part dans le terminal les deux commandes:
+
 export http_proxy=proxy:3128  
 export https_proxy=proxy:3128  
 Faire la commande : 
@@ -63,3 +66,14 @@ vider le .cache avec la lettre d
 -	Vous pouvez utilisez jupyter notebook pour créer des fichiers txt, utiliser le terminal et visualiser vos documents
 too old :
 https://www-ppti.ufr-info-p6.jussieu.fr/index.php/faq/technique#pip-tme
+
+
+
+### Need to add a new version with the support of pycharm and auto deploy :
+Enabling automatic upload:
+As soon as the default server is set, you can make upload to this server automatic. This can be done in the following two ways:
+
+Open the deployment Options (Settings/Preferences | Deployment | Options or Tools | Deployment | Options from the main menu), and in the Upload changed files automatically to the default server field choose Always, or On explicit save action. The difference between these two choices is explained in the field description.
+
+[PPTI Official doc](https://www-ppti.ufr-info-p6.jussieu.fr/index.php/support/connexions-distantes)
+https://www-ppti.ufr-info-p6.jussieu.fr/images/doc/connexions-windows.pdf
